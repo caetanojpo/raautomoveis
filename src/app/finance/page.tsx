@@ -13,12 +13,13 @@ export default function page() {
     flexDirection={"column"}
     bg={`dark`}
     gap={"40px"}
+    
  
   >
         <Flex >
       <FinanceForms/>
     </Flex>
-    <Flex position={"relative"} h={{base:"18dvh", xl:"83dvh"}} w={"100%"} zIndex={30} marginBottom={{base:'50px', xl:'100px'}}>
+    <Flex position={"relative"} h={{base:"18dvh", xl:"83dvh"}} w={"100%"} zIndex={30} marginBottom={{base:'50px', xl:'100px'}} >
       <Image
         alt=""
         src={finance}
