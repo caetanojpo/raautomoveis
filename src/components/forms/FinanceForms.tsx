@@ -158,6 +158,7 @@ abaixo que te retornaremos em breve.
               borderColor={"primary"}
               bg={"light"}
               placeholder={"DATA DE NASCIMENTO"}
+              placeContent={"DATA DE NASCIMENTO"}
               value={formData.birth}
               onChange={(event: any) => handleInputChange(event)}
             />
