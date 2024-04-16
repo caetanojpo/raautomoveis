@@ -42,7 +42,7 @@ export default function Footer() {
     {
       description: "TEL: (11) 97432-6999",
       icon: "mynaui:telephone",
-      link: "https://api.whatsapp.com/send?phone=5518997970919",
+      link: "https://api.whatsapp.com/send?phone=5511974326999",
     },
     {
       description: "automoveisra@gmail.com",
