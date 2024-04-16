@@ -21,7 +21,7 @@ const CardVehicle = (props: propsCardVehicle) => {
       boxShadow="md"
       textAlign="center"
       flexDir="column"
-      justify="center"
+      justify="space-between"
       alignItems="center"
 
     ><Flex h='200px' w='100%' position={'relative'} mb="15px" justify='center'>

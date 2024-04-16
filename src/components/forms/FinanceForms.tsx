@@ -221,7 +221,7 @@ abaixo que te retornaremos em breve.
           gap={"20px"}
         >
           <Text>
-            D: Deixe aqui seu contato e os dados do veículo que tem interesse. Em
+          Deixe aqui seu contato e os dados do veículo que tem interesse. Em
 breve lhe retornaremos com um orçamento que cabe no seu bolso!
           </Text>
           <Text>

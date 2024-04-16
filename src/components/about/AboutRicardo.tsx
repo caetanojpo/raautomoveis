@@ -53,25 +53,25 @@ export default function AboutRicardo() {
           gap={"20px"}
         >
           <Text>
-            Ricardo Ambrósio sempre foi apaixonado por Carros. Jipeiro e
+            Ricardo Ambrósio sempre foi apaixonado por carros. Jipeiro e
             fascinado por motores, teve o mundo dos automóveis sempre presente
-            em sua vida. Trabalhou por 29 anos em Bancos, fazendo financiamento
+            em sua vida. Trabalhou por 29 anos em bancos, fazendo financiamento
             de veículos, ajudando milhares de pessoas a conquistar o sonho do
-            seu Carro Novo.
+            seu carro novo.
           </Text>
           <Text>
-            Agora, idealizou um projeto antigo de ter sua própria Loja de
-            Automóveis e fundou a RA Automóveis a 3 anos em Jundiaí. Desde
+            Agora, idealizou um projeto antigo de ter sua própria loja de
+            automóveis e fundou a RA Automóveis a 3 anos em Jundiaí. Desde
             então, foram mais de 500 veículos vendidos, carregando sempre em
-            cada negociação, Transparência, Honestidade e Qualidade nos Veículos
-            e no Atendimento.
+            cada negociação, Transparência, honestidade e qualidade nos veículos
+            e no atendimento.
           </Text>
           <Text>
             Nessa caminhada, foram diversos{" "}
             <span style={{ color: "#CB3438", fontWeight: "bold" }}>
               sonhos realizados
             </span>
-            , Necessidade Supridas, Amizades Construídas e uma grande história
+            , necessidade supridas, amizades construídas e uma grande história
             no mercado automotivo.
           </Text>
         </Flex>
