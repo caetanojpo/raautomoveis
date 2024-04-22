@@ -1,41 +1,41 @@
 import Image from "next/image";
 import CarBanner from "/src/assets/banner.png";
 import ContactLine from "/src/assets/contactLines.png";
-import AvatarViviane from "../assets/viviane.png";
 import InfoDetail from "../assets/infoDetail.png";
-import AvatarBruno from "../assets/bruno.png";
-import AvatarJonathan from "../assets/jhonatan.png";
-import { Box, Divider, Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
+import AvatarMarcos from "../assets/avatarMarcos.png";
+import AvatarValdineia from "../assets/avatarValdineia.png";
+import EvaluationDefault from "@/assets/evaluationDefault.png";
+import { Divider, Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 import { EvaluationCard } from "@/components/EvaluationCard";
-import React, { useEffect } from "react";
+import React from "react";
 import CardVehicle from "@/components/ShowroomCard/Card";
 import { Veiculos } from "@/utils/Veiculos";
 
 const Avaliacoes = [
   {
-    avatar: AvatarViviane,
+    avatar: EvaluationDefault,
     rating: 5,
-    name: "viviane costa",
-    time: "um ano atrás",
+    name: "William Moraes",
+    time: "um mês atrás",
     comment:
-      "Loja bonita e bem organizada ,com Ótimo atendimento e consultores de vendas super atenciosos. Veículos de excelente qualidade e procedência.Bons preços ,negociação transparente e muito satisfatória.Cumprem o que prometem. Estou 100% satisfeita!!Vale a pena conferir!",
+      "Fiz aquisição de um T-Cross na RA Automóveis, carro de procedência, estoque de modelos variados e carros pra pessoas exigentes. O atendimento e serviços prestados na pré-venda, venda e pós venda nota 1000 !!!!! Me tornei cliente fidelidade.",
   },
   {
-    avatar: AvatarBruno,
+    avatar: AvatarMarcos,
     rating: 5,
-    name: "bruno fornazari",
-    time: "2 anos atrás",
+    name: "Marcos Marcelo bastos",
+    time: "2 meses atrás",
     comment:
-      "Atendimento personalizado, de hospitalidade sem igual! Ricardo vive o negócio da venda de carros, além de conhecer muito de automóveis! Fiquei feliz em adquirir meu novo Kwid na RA!!!",
+      "Adorei a recepção do proprietário Ricardo que nos atendeu muito bem, a loja é linda e os carros são muito novos.",
   },
   {
-    avatar: AvatarJonathan,
+    avatar: AvatarValdineia,
     rating: 5,
-    name: "jhonathan rodrigues",
-    time: "2 anos atrás",
+    name: "valdineia pereira",
+    time: "um mês atrás",
     comment:
-      "Muito feliz compra bem sucedida Fox em perfeitas condições, entregue a nós limpo e higienizado tudo perfeito parabéns a toda a equipe pelo atendimento e ótimo serviço prestado obrigado volto concerteza 👍👏",
-  },
+      "Atendimento de excelente qualidade, além de automóveis bem conservado e , com preços acessíveis. Recomendo com certeza 🤩",
+  }
 ];
 export default function Home() {
   // useEffect(() => {
@@ -175,7 +175,7 @@ export default function Home() {
     gap={{ base: 5, md: 5 }}
 
   >
-        {Veiculos.slice(0, 5).map((veiculo, index, slicedArray) => (
+        {Veiculos.sort(() => {return 0.5 - Math.random()}).slice(0, 5).map((veiculo, index, slicedArray) => (
          <GridItem display={'flex'}   justifyContent={{base:'center',xl:"space-around" }} alignItems="center" key={index}>
             <CardVehicle
               image={veiculo.image}

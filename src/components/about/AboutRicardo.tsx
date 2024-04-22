@@ -32,16 +32,16 @@ export default function AboutRicardo() {
           color={`light`}
           flexDirection={"column"}
           align={"center"}
-          style={{ letterSpacing: "5px" }}
+          style={{ letterSpacing: "2px" }}
         >
           <Heading color={"primary"} fontSize={"2.2rem"}>
-            SOBRE
+            UM POUCO
           </Heading>
           <Flex w={"100%"}>
-            <Heading fontSize={"3rem"}>RICARDO</Heading>
+            <Heading fontSize={"2.5rem"}>DA NOSSA</Heading>
           </Flex>
           <Flex w={"100%"} justify={"flex-end"} ml={"1dvw"}>
-            <Heading fontSize={"3rem"}>AMBROSIO</Heading>
+            <Heading fontSize={"3rem"}>HISTÓRIA</Heading>
           </Flex>
         </Flex>
         <Flex
@@ -53,7 +53,7 @@ export default function AboutRicardo() {
           gap={"20px"}
         >
           <Text>
-            Ricardo Ambrósio sempre foi apaixonado por carros. Jipeiro e
+            <strong>Ricardo Ambrósio</strong> sempre foi apaixonado por carros. Jipeiro e
             fascinado por motores, teve o mundo dos automóveis sempre presente
             em sua vida. Trabalhou por 29 anos em bancos, fazendo financiamento
             de veículos, ajudando milhares de pessoas a conquistar o sonho do
@@ -63,7 +63,7 @@ export default function AboutRicardo() {
             Agora, idealizou um projeto antigo de ter sua própria loja de
             automóveis e fundou a RA Automóveis a 3 anos em Jundiaí. Desde
             então, foram mais de 500 veículos vendidos, carregando sempre em
-            cada negociação, Transparência, honestidade e qualidade nos veículos
+            cada negociação, transparência, honestidade e qualidade nos veículos
             e no atendimento.
           </Text>
           <Text>

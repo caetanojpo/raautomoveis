@@ -18,6 +18,8 @@ export const EvaluationCard = (props: propsEvaluation) => {
           style={{
             width: "80px",
             height: "80px",
+            objectFit:'contain',
+            objectPosition:'center',
             border: "2.5px solid #CB3438",
             borderRadius: "50%",
           }}

@@ -5,7 +5,7 @@ import ra from "@/assets/aboutRa.png";
 
 export default function AboutRA() {
   return (
-    <Flex h={{ base: "100%", xl: "90dvh" }} w={"100dvw"} position={"relative"}>
+    <Flex h={{ base: "100%", xl: "90dvh" }} w={"100dvw"} position={"relative"} fontFamily={'Eina'}>
       <Flex position={"absolute"} h={"100%"} w={"100%"}>
         <Flex position={"relative"} h={"100%"} w={"100%"}>
           <Image
@@ -33,11 +33,11 @@ export default function AboutRA() {
           color={`light`}
           flexDirection={"column"}
           align={"flex-start"}
-          style={{ letterSpacing: "5px" }}
+          style={{ letterSpacing: "2px" }}
         >
     
           <Flex w={"100%"}>
-            <Heading fontSize={"2.2rem"}>VENHA CONHECER</Heading>
+            <Heading fontSize={"2.2rem"} >VENHA CONHECER</Heading>
           </Flex>
           <Heading fontSize={"2.2rem"}>
             NOSSA <span style={{color:'#CB3438', fontSize:'3rem'}}>LOJA</span>
