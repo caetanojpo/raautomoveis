@@ -106,6 +106,41 @@ export default function page() {
     ))}
   </Grid>
   }
+  {
+    Veiculos.length > 15 &&
+    <Grid
+    w="100%"
+    py="20px"
+    px="35px"
+    mt={5}
+    borderTop="3px solid #cb3438"
+    borderBottom="3px solid #cb3438"
+    bgColor="#848688"
+    templateColumns={{base:'repeat(1, 1fr)', md:'repeat(2,1fr)', lg:'repeat(3, 1r)', xl:'repeat(4, 1fr)', '2xl': 'repeat(5, 1fr)'}}
+    gap={{ base: 5, md: 5 }}
+
+  >
+    {Veiculos.slice(15, 20).map((veiculo, index, slicedArray) => (
+      <GridItem display={'flex'}   justifyContent={{base:'center',xl:"space-around" }}  alignItems="center" key={index}>
+        <CardVehicle
+          image={veiculo.image}
+          title={veiculo.title.toLowerCase()}
+          description={veiculo.description.toLowerCase()}
+          price={veiculo.price}
+          link={veiculo.link}
+        />
+        {index !== slicedArray.length - 1 && (
+          <Divider
+            display={{ base: "none", md: "flex" }}
+            orientation="vertical"
+            h="320px"
+            borderColor="light"
+          />
+        )}
+      </GridItem>
+    ))}
+  </Grid>
+  }
   </Flex>
   )
 }
