@@ -179,8 +179,8 @@ export default function Home() {
          <GridItem display={'flex'}   justifyContent={{base:'center',xl:"space-around" }} alignItems="center" key={index}>
             <CardVehicle
               image={veiculo.image}
-              title={veiculo.title}
-              description={veiculo.description}
+              title={veiculo.title.toLowerCase()}
+              description={veiculo.description.toLowerCase()}
               price={veiculo.price}
               link={veiculo.link}
             />
