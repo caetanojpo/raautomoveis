@@ -11,7 +11,7 @@ export default function page() {
     <Grid
     w="100%"
     py="20px"
-    px="35px"
+    px={{base:'10px', md:'35px'}}
     borderTop="3px solid #cb3438"
     borderBottom="3px solid #cb3438"
     bgColor="#848688"
@@ -42,7 +42,7 @@ export default function page() {
   <Grid
     w="100%"
     py="20px"
-    px="35px"
+    px={{base:'5px',lg:'35px'}}
     mt={5}
     borderTop="3px solid #cb3438"
     borderBottom="3px solid #cb3438"
@@ -76,7 +76,7 @@ export default function page() {
     <Grid
     w="100%"
     py="20px"
-    px="35px"
+    px={{base:'5px',lg:'35px'}}
     mt={5}
     borderTop="3px solid #cb3438"
     borderBottom="3px solid #cb3438"
@@ -111,7 +111,7 @@ export default function page() {
     <Grid
     w="100%"
     py="20px"
-    px="35px"
+    px={{base:'5px',lg:'35px'}}
     mt={5}
     borderTop="3px solid #cb3438"
     borderBottom="3px solid #cb3438"
