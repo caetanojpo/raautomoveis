@@ -15,7 +15,15 @@ export default function page() {
       bg={`dark`}
       gap={"40px"}
     >
-      <Flex position={"relative"} h={{base:"30dvh", xl:"100dvh"}} w={"100%"} zIndex={30}>
+      <Flex position={"relative"} h={{base:"30dvh", xl:"100dvh"}} w={"100%"} zIndex={30} display={{base:'none', md:'flex'}}>
+        <Image
+          alt=""
+          src={map}
+          fill
+          style={{ position: "absolute", objectFit:'cover', objectPosition:'center' }}
+        />
+      </Flex>
+      <Flex position={"relative"} h={{base:"40dvh", xl:"100dvh"}} w={"100%"} zIndex={30} display={{base:'flex', md:'none'}}>
         <Image
           alt=""
           src={map}

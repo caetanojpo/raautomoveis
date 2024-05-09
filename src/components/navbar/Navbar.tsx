@@ -101,10 +101,10 @@ export default function Navbar() {
           >
             <CustomIcon color="white" icon="material-symbols:menu" />
           </Button>
-          <Drawer placement={"left"} onClose={onClose} isOpen={isOpen}>
+          <Drawer placement={"left"} onClose={onClose} isOpen={isOpen} size={'xs'}>
             <DrawerOverlay />
             <DrawerContent bg={"secondary"}>
-              <DrawerBody>
+              <DrawerBody   overflow={'hidden'}>
                 <List
                   display={{ base: "flex", xl: "none" }}
                   flexDir="column"
@@ -113,12 +113,18 @@ export default function Navbar() {
                   gap="2rem"
                   mt="1rem"
                   color={"light"}
-                  fontSize={"1.6rem"}
+                  fontSize={"1.2rem"}
                   fontStyle={"italic"}
                   fontWeight={"bold"}
+                
                 >
+                         <ListItem >
+                      <Link href={"/"} onClick={onClose}>
+                        <Text>{"HOME"}</Text>
+                      </Link>
+                    </ListItem>
                   {nav.map((item, index) => (
-                    <ListItem key={index}>
+                    <ListItem key={index} onClick={onClose}>
                       <Link href={item.link}>
                         <Text>{item.name}</Text>
                       </Link>
