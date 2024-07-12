@@ -98,6 +98,9 @@ export default function Page() {
       {renderVehicleGrid(data, 5, 10)}
       {data.length > 10 && renderVehicleGrid(data, 10, 15)}
       {data.length > 15 && renderVehicleGrid(data, 15, 20)}
+      {data.length > 20 && renderVehicleGrid(data, 20, 25)}
+      {data.length > 25 && renderVehicleGrid(data, 25, 30)}
+      {data.length > 30 && renderVehicleGrid(data, 30, 35)}
     </Flex>
   );
 }

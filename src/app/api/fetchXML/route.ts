@@ -1,8 +1,8 @@
-// app/api/fetchXML/route.ts
+// src/app/api/fetchXML/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import https from 'https';
 
-export async function GET(req: NextRequest) {
+export async function GET(req: NextRequest): Promise<Response> {
   const { searchParams } = new URL(req.url);
   const url = searchParams.get('url');
 
