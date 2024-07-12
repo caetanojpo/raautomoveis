@@ -17,13 +17,15 @@
     "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18",
-    "react-simple-star-rating": "^5.1.7"
+    "react-simple-star-rating": "^5.1.7",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "@iconify/react": "^4.1.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/xml2js": "^0.4.14",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
     "typescript": "^5"

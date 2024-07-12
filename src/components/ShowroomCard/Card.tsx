@@ -26,8 +26,8 @@ const CardVehicle = (props: propsCardVehicle) => {
     >
       <Flex
         h={{ base: "100%", md: "50%" }}
-        w={{ base: "50%", md: "80%", xl:'100%' }}
-        maxW={{base:'190px', lg:'300px'}}
+        w={{ base: "50%", md: "80%", xl: "100%" }}
+        maxW={{ base: "190px", lg: "300px" }}
         position={"relative"}
         mb={{ base: "0px", md: "15px" }}
         justify="center"

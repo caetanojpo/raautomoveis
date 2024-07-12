@@ -25,6 +25,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const nav = [
+    { name: "HOME", link: "/" },
     { name: "SHOWROOM", link: "/showroom" },
     { name: "SOBRE", link: "/about" },
     { name: "CONTATO", link: "/contact" },
