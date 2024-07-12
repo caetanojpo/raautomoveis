@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
-import { parseStringPromise } from "xml2js";
+// hooks/useFetchXML.ts
+import { useState, useEffect } from 'react';
+import { parseStringPromise } from 'xml2js';
 
-type Veiculo = {
+export type Veiculo = {
   id: number;
   loja: string;
   tipo: string;
@@ -43,7 +44,10 @@ const useFetchXML = (url: string) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(url);
+        const response = await fetch(`/api/fetchXML?url=${encodeURIComponent(url)}`);
+        if (!response.ok) {
+          throw new Error(`Error fetching data: ${response.statusText}`);
+        }
         const text = await response.text();
         const result: VeiculosResponse = await parseStringPromise(text, {
           explicitArray: false,

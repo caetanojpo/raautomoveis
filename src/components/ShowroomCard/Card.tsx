@@ -5,7 +5,8 @@ type propsCardVehicle = {
   title: string;
   description: string;
   price: string;
-  link: string;
+  link?: string;
+  handleClick?: () => void;
 };
 const CardVehicle = (props: propsCardVehicle) => {
   return (
@@ -41,6 +42,7 @@ const CardVehicle = (props: propsCardVehicle) => {
             objectFit: "cover",
             objectPosition: "center",
             position: "absolute",
+            maxHeight: "100%",
           }}
           borderRadius="10px"
           border="2px solid #cb3438"
@@ -77,15 +79,14 @@ const CardVehicle = (props: propsCardVehicle) => {
           fontFamily="Joyride"
           color="#919497"
         >
-          r$ {props.price}
+        {props.price}
         </Text>
+
         <Flex
-          as="a"
           className="button"
           bgColor="#CB3438"
-          href={props.link}
-          target="_blank"
           padding={{ base: 4, md: 2 }}
+          onClick={props.handleClick}
         >
           <Text
             fontFamily="JoyrideExt"

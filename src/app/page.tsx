@@ -6,12 +6,21 @@ import InfoDetail from "../assets/infoDetail.png";
 import AvatarMarcos from "../assets/avatarMarcos.png";
 import AvatarValdineia from "../assets/avatarValdineia.png";
 import EvaluationDefault from "@/assets/evaluationDefault.png";
-import { Divider, Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
+import {
+  Divider,
+  Flex,
+  Grid,
+  GridItem,
+  Heading,
+  Spinner,
+  Text,
+} from "@chakra-ui/react";
 import { EvaluationCard } from "@/components/EvaluationCard";
 import React from "react";
 import CardVehicle from "@/components/ShowroomCard/Card";
-import { Veiculos } from "@/utils/Veiculos";
 import useFetchXML from "./hooks/useFetchXML";
+import { formatCurrency } from "@/utils/formatCurrency";
+import { handleSendVehiculeMessage } from "@/utils/SendVehiculeMessage";
 
 const Avaliacoes = [
   {
@@ -44,6 +53,7 @@ const URL =
 
 export default function Home() {
   const { loading, data, error } = useFetchXML(URL);
+
   return (
     <Flex flexDir="column" bgColor="#282829">
       <Image
@@ -158,34 +168,40 @@ export default function Home() {
         }}
         gap={{ base: 5, md: 5 }}
       >
-        {data
-          .slice()
-          .sort(() => 0.5 - Math.random())
-          .slice(0, 5)
-          .map((veiculo, index, slicedArray) => (
-            <GridItem
-              display={"flex"}
-              justifyContent={{ base: "center", xl: "space-around" }}
-              alignItems="center"
-              key={index}
-            >
-              <CardVehicle
-                image={veiculo.galeria?.item[0]}
-                title={veiculo.titulo.toLowerCase()}
-                description={veiculo.modelo.toLowerCase()}
-                price={veiculo.valor.toString()}
-                link={""}
-              />
-              {index !== slicedArray.length - 1 && (
-                <Divider
-                  display={{ base: "none", xl: "flex" }}
-                  orientation="vertical"
-                  h="320px"
-                  borderColor="light"
+        {loading ? (
+          <Flex justifyContent="center" alignItems="center"    bgColor="#848688" h="10vh" w="100vw">
+            <Spinner size="xl" color="white" />
+          </Flex>
+        ) : (
+          data
+            .slice()
+            .sort(() => 0.5 - Math.random())
+            .slice(0, 5)
+            .map((veiculo, index, slicedArray) => (
+              <GridItem
+                display={"flex"}
+                justifyContent={{ base: "center", xl: "space-around" }}
+                alignItems="center"
+                key={index}
+              >
+                <CardVehicle
+                  image={veiculo.galeria?.item[0]}
+                  title={veiculo.titulo.toLowerCase()}
+                  description={veiculo.modelo.toLowerCase()}
+                  price={formatCurrency(veiculo.valor)}
+                  handleClick={() => handleSendVehiculeMessage(veiculo)}
                 />
-              )}
-            </GridItem>
-          ))}
+                {index !== slicedArray.length - 1 && (
+                  <Divider
+                    display={{ base: "none", xl: "flex" }}
+                    orientation="vertical"
+                    h="320px"
+                    borderColor="light"
+                  />
+                )}
+              </GridItem>
+            ))
+        )}
       </Grid>
     </Flex>
   );
