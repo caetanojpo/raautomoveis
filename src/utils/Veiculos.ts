@@ -1,154 +1,122 @@
 export const Veiculos = [
   {
-    "title": "JEEP COMPASS",
-    "description": "2.0 16V FLEX LONGITUDE AUTOMÁTICO",
-    "price": "97.900",
-    "location": "Jundiaí - SP",
-    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202405/20240504/jeep-compass-2.0-16v-flex-longitude-automatico-wmimagem12273874064.jpg",
-    "link": "https://www.webmotors.com.br/comprar/jeep/compass/20-16v-flex-longitude-automatico/4-portas/2017-2018/51995028?pos=a51995028g:&np=1"
-  },
-  {
     "title": "HONDA CIVIC",
     "description": "2.0 EXR 16V FLEX 4P AUTOMÁTICO",
-    "price": "72.900",
+    "price": " 72.490",
     "location": "Jundiaí - SP",
-    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202405/20240504/honda-civic-2.0-exr-16v-flex-4p-automatico-wmimagem12203079739.jpg",
-    "link": "https://www.webmotors.com.br/comprar/honda/civic/20-exr-16v-flex-4p-automatico/4-portas/2013-2014/51994886?pos=b51994886g:&np=1"
+    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202407/20240707/honda-civic-2.0-exr-16v-flex-4p-automatico-wmimagem12310431690.jpg",
+    "link": "https://www.webmotors.com.br/comprar/honda/civic/20-exr-16v-flex-4p-automatico/4-portas/2013-2014/53133810?pos=a53133810g:&np=1"
   },
   {
-    "title": "NISSAN KICKS",
-    "description": "1.6 16V FLEXSTART EXCLUSIVE XTRONIC",
-    "price": "110.900",
+    "title": "CHEVROLET S10",
+    "description": "2.4 ADVANTAGE 4X2 CD 8V FLEX 4P MANUAL",
+    "price": " 50.500",
     "location": "Jundiaí - SP",
-    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202405/20240504/nissan-kicks-1.6-16v-flexstart-exclusive-xtronic-wmimagem12261017593.jpg",
-    "link": "https://www.webmotors.com.br/comprar/nissan/kicks/16-16v-flexstart-exclusive-xtronic/4-portas/2021-2022/51995015?pos=c51995015g:&np=1"
-  },
-  {
-    "title": "FIAT TORO",
-    "description": "1.3 TURBO 270 FLEX FREEDOM AT6",
-    "price": "121.900",
-    "location": "Jundiaí - SP",
-    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202405/20240504/fiat-toro-1.3-turbo-270-flex-freedom-at6-wmimagem12181556492.jpg",
-    "link": "https://www.webmotors.com.br/comprar/fiat/toro/13-turbo-270-flex-freedom-at6/4-portas/2021-2022/51994829?pos=d51994829g:&np=1"
-  },
-  {
-    "title": "VOLKSWAGEN T-CROSS",
-    "description": "1.0 200 TSI TOTAL FLEX COMFORTLINE AUTOMÁTICO",
-    "price": "112.900",
-    "location": "Jundiaí - SP",
-    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202405/20240504/volkswagen-tcross-1.0-200-tsi-total-flex-comfortline-automatico-wmimagem12232455721.jpg",
-    "link": "https://www.webmotors.com.br/comprar/volkswagen/t-cross/10-200-tsi-total-flex-comfortline-automatico/4-portas/2022/51994962?pos=e51994962g:&np=1"
-  },
-  {
-    "title": "RENAULT CAPTUR",
-    "description": "1.3 TCE FLEX ICONIC X-TRONIC",
-    "price": "108.900",
-    "location": "Jundiaí - SP",
-    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202405/20240504/renault-captur-1.3-tce-flex-iconic-xtronic-wmimagem12222894372.jpg",
-    "link": "https://www.webmotors.com.br/comprar/renault/captur/13-tce-flex-iconic-x-tronic/4-portas/2021-2022/51994935?pos=f51994935g:&np=1"
-  },
-  {
-    "title": "CHEVROLET COBALT",
-    "description": "1.4 SFI LT 8V FLEX 4P MANUAL",
-    "price": "37.900",
-    "location": "Jundiaí - SP",
-    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202405/20240509/chevrolet-cobalt-1.4-sfi-lt-8v-flex-4p-manual-wmimagem08065883038.jpg",
-    "link": "https://www.webmotors.com.br/comprar/chevrolet/cobalt/14-sfi-lt-8v-flex-4p-manual/4-portas/2012/52079033?pos=g52079033g:&np=1"
-  },
-  {
-    "title": "HYUNDAI HB20",
-    "description": "1.6 COPA DO MUNDO 16V FLEX 4P MANUAL",
-    "price": "53.900",
-    "location": "Jundiaí - SP",
-    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202405/20240509/hyundai-hb20-1.6-copa-do-mundo-16v-flex-4p-manual-wmimagem08292687318.jpg",
-    "link": "https://www.webmotors.com.br/comprar/hyundai/hb20/16-copa-do-mundo-16v-flex-4p-manual/4-portas/2014-2015/52079196?pos=h52079196g:&np=1"
-  },
-  {
-    "title": "JEEP COMPASS",
-    "description": "2.0 16V FLEX LONGITUDE AUTOMÁTICO",
-    "price": "97.900",
-    "location": "Jundiaí - SP",
-    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202405/20240504/jeep-compass-2.0-16v-flex-longitude-automatico-wmimagem12352338028.jpg",
-    "link": "https://www.webmotors.com.br/comprar/jeep/compass/20-16v-flex-longitude-automatico/4-portas/2017-2018/51995149?pos=i51995149g:&np=1"
-  },
-  {
-    "title": "VOLKSWAGEN T-CROSS",
-    "description": "1.0 200 TSI TOTAL FLEX COMFORTLINE AUTOMÁTICO",
-    "price": "123.900",
-    "location": "Jundiaí - SP",
-    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202405/20240504/volkswagen-tcross-1.0-200-tsi-total-flex-comfortline-automatico-wmimagem12275160732.jpg",
-    "link": "https://www.webmotors.com.br/comprar/volkswagen/t-cross/10-200-tsi-total-flex-comfortline-automatico/4-portas/2022-2023/51995039?pos=j51995039g:&np=1"
-  },
-  {
-    "title": "FIAT MOBI",
-    "description": "1.0 EVO FLEX LIKE. MANUAL",
-    "price": "49.200",
-    "location": "Jundiaí - SP",
-    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202405/20240504/fiat-mobi-1.0-evo-flex-like.-manual-wmimagem12283270033.jpg",
-    "link": "https://www.webmotors.com.br/comprar/fiat/mobi/10-evo-flex-like-manual/4-portas/2020-2021/51995047?pos=k51995047g:&np=1"
-  },
-  {
-    "title": "CAOA CHERY QQ",
-    "description": "1.1 MPFI 16V GASOLINA 4P MANUAL",
-    "price": "25.900",
-    "location": "Jundiaí - SP",
-    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202405/20240504/caoa-chery-qq-1.1-mpfi-16v-gasolina-4p-manual-wmimagem12403469338.jpg",
-    "link": "https://www.webmotors.com.br/comprar/caoa-chery/qq/11-mpfi-16v-gasolina-4p-manual/4-portas/2012-2013/51995236?pos=l51995236g:&np=1"
-  },
-  {
-    "title": "FIAT MOBI",
-    "description": "1.0 EVO FLEX LIKE. MANUAL",
-    "price": "55.900",
-    "location": "Jundiaí - SP",
-    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202405/20240504/fiat-mobi-1.0-evo-flex-like.-manual-wmimagem12373937119.jpg",
-    "link": "https://www.webmotors.com.br/comprar/fiat/mobi/10-evo-flex-like-manual/4-portas/2022-2023/51995195?pos=m51995195g:&np=1"
-  },
-  {
-    "title": "VOLKSWAGEN NIVUS",
-    "description": "1.0 200 TSI TOTAL FLEX HIGHLINE AUTOMÁTICO",
-    "price": "111.900",
-    "location": "Jundiaí - SP",
-    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202405/20240504/volkswagen-nivus-1.0-200-tsi-total-flex-highline-automatico-wmimagem12381940236.jpg",
-    "link": "https://www.webmotors.com.br/comprar/volkswagen/nivus/10-200-tsi-total-flex-highline-automatico/4-portas/2020-2021/51995205?pos=n51995205g:&np=1"
-  },
-  {
-    "title": "VOLKSWAGEN NIVUS",
-    "description": "1.0 200 TSI TOTAL FLEX HIGHLINE AUTOMÁTICO",
-    "price": "110.900",
-    "location": "Jundiaí - SP",
-    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202405/20240504/volkswagen-nivus-1.0-200-tsi-total-flex-highline-automatico-wmimagem12321589828.jpg",
-    "link": "https://www.webmotors.com.br/comprar/volkswagen/nivus/10-200-tsi-total-flex-highline-automatico/4-portas/2021/51995082?pos=o51995082g:&np=1"
-  },
-  {
-    "title": "VOLKSWAGEN T-CROSS",
-    "description": "1.0 200 TSI TOTAL FLEX COMFORTLINE AUTOMÁTICO",
-    "price": "98.900",
-    "location": "Jundiaí - SP",
-    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202405/20240504/volkswagen-tcross-1.0-200-tsi-total-flex-comfortline-automatico-wmimagem12312369930.jpg",
-    "link": "https://www.webmotors.com.br/comprar/volkswagen/t-cross/10-200-tsi-total-flex-comfortline-automatico/4-portas/2019-2020/51995066?pos=p51995066g:&np=1"
+    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202407/20240707/chevrolet-s10-2.4-advantage-4x2-cd-8v-flex-4p-manual-wmimagem12164527795.jpg",
+    "link": "https://www.webmotors.com.br/comprar/chevrolet/s10/24-advantage-4x2-cd-8v-flex-4p-manual/4-portas/2008/53133740?pos=b53133740g:&np=1"
   },
   {
     "title": "HYUNDAI HB20",
     "description": "1.6 PREMIUM 16V FLEX 4P AUTOMÁTICO",
-    "price": "69.900",
+    "price": " 68.990",
     "location": "Jundiaí - SP",
-    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202405/20240504/hyundai-hb20-1.6-premium-16v-flex-4p-automatico-wmimagem12250818144.jpg",
-    "link": "https://www.webmotors.com.br/comprar/hyundai/hb20/16-premium-16v-flex-4p-automatico/4-portas/2017-2018/51994998?pos=q51994998g:&np=1"
+    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202407/20240707/hyundai-hb20-1.6-premium-16v-flex-4p-automatico-wmimagem12471554625.jpg",
+    "link": "https://www.webmotors.com.br/comprar/hyundai/hb20/16-premium-16v-flex-4p-automatico/4-portas/2017-2018/53133870?pos=c53133870g:&np=1"
+  },
+  {
+    "title": "FIAT PULSE",
+    "description": "1.3 FLEX DRIVE CVT",
+    "price": " 91.900",
+    "location": "Jundiaí - SP",
+    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202407/20240707/fiat-pulse-1.3-flex-drive-cvt-wmimagem12033853123.jpg",
+    "link": "https://www.webmotors.com.br/comprar/fiat/pulse/13-flex-drive-cvt/4-portas/2021-2022/53133711?pos=d53133711g:&np=1"
+  },
+  {
+    "title": "FORD KA",
+    "description": "1.0 TI-VCT FLEX SE PLUS MANUAL",
+    "price": " 53.600",
+    "location": "Jundiaí - SP",
+    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202407/20240707/ford-ka-1.0-tivct-flex-se-plus-manual-wmimagem1208048622.jpg",
+    "link": "https://www.webmotors.com.br/comprar/ford/ka/10-ti-vct-flex-se-plus-manual/4-portas/2020/53133721?pos=e53133721g:&np=1"
+  },
+  {
+    "title": "CITROËN C4 CACTUS",
+    "description": "1.6 VTI 120 FLEX FEEL BUSINESS EAT6",
+    "price": " 84.900",
+    "location": "Jundiaí - SP",
+    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202407/20240707/citroen-c4-cactus-1.6-vti-120-flex-feel-business-eat6-wmimagem12440200352.jpg",
+    "link": "https://www.webmotors.com.br/comprar/citroen/c4-cactus/16-vti-120-flex-feel-business-eat6/4-portas/2021-2022/53133861?pos=f53133861g:&np=1"
+  },
+  {
+    "title": "FIAT MOBI",
+    "description": "1.0 EVO FLEX LIKE. MANUAL",
+    "price": " 43.890",
+    "location": "Jundiaí - SP",
+    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202407/20240707/fiat-mobi-1.0-evo-flex-like.-manual-wmimagem12325995525.jpg",
+    "link": "https://www.webmotors.com.br/comprar/fiat/mobi/10-evo-flex-like-manual/4-portas/2018-2019/53133814?pos=g53133814g:&np=1"
+  },
+  {
+    "title": "CHEVROLET ONIX",
+    "description": "1.4 MPFI ACTIV 8V FLEX 4P AUTOMÁTICO",
+    "price": " 68.890",
+    "location": "Jundiaí - SP",
+    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202407/20240707/chevrolet-onix-1.4-mpfi-activ-8v-flex-4p-automatico-wmimagem12263140930.jpg",
+    "link": "https://www.webmotors.com.br/comprar/chevrolet/onix/14-mpfi-activ-8v-flex-4p-automatico/4-portas/2019/53133798?pos=h53133798g:&np=1"
+  },
+  {
+    "title": "VOLKSWAGEN SAVEIRO",
+    "description": "1.6 CROSS CD 16V FLEX 2P MANUAL",
+    "price": " 77.490",
+    "location": "Jundiaí - SP",
+    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202407/20240707/volkswagen-saveiro-1.6-cross-cd-16v-flex-2p-manual-wmimagem12123686849.jpg",
+    "link": "https://www.webmotors.com.br/comprar/volkswagen/saveiro/16-cross-cd-16v-flex-2p-manual/4-portas/2016-2017/53133733?pos=i53133733g:&np=1"
+  },
+  {
+    "title": "HYUNDAI CRETA",
+    "description": "1.6 16V FLEX ATTITUDE AUTOMÁTICO",
+    "price": " 83.900",
+    "location": "Jundiaí - SP",
+    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202407/20240707/hyundai-creta-1.6-16v-flex-attitude-automatico-wmimagem11595643647.jpg",
+    "link": "https://www.webmotors.com.br/comprar/hyundai/creta/16-16v-flex-attitude-automatico/4-portas/2018-2019/53133699?pos=j53133699g:&np=1"
+  },
+  {
+    "title": "VOLKSWAGEN T-CROSS",
+    "description": "1.0 200 TSI TOTAL FLEX COMFORTLINE AUTOMÁTICO",
+    "price": " 97.890",
+    "location": "Jundiaí - SP",
+    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202406/20240617/volkswagen-tcross-1.0-200-tsi-total-flex-comfortline-automatico-wmimagem15581256992.jpg",
+    "link": "https://www.webmotors.com.br/comprar/volkswagen/t-cross/10-200-tsi-total-flex-comfortline-automatico/4-portas/2019-2020/52777200?pos=k52777200g:&np=1"
+  },
+  {
+    "title": "VOLKSWAGEN NIVUS",
+    "description": "1.0 200 TSI TOTAL FLEX HIGHLINE AUTOMÁTICO",
+    "price": " 109.890",
+    "location": "Jundiaí - SP",
+    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202406/20240617/volkswagen-nivus-1.0-200-tsi-total-flex-highline-automatico-wmimagem1553436522.jpg",
+    "link": "https://www.webmotors.com.br/comprar/volkswagen/nivus/10-200-tsi-total-flex-highline-automatico/4-portas/2021/52776954?pos=l52776954g:&np=1"
+  },
+  {
+    "title": "MERCEDES-BENZ CLA 180",
+    "description": "1.6 CGI GASOLINA 7G-DCT",
+    "price": " 124.900",
+    "location": "Jundiaí - SP",
+    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202407/20240707/mercedesbenz-cla-180-1.6-cgi-gasolina-7gdct-wmimagem12350591612.jpg",
+    "link": "https://www.webmotors.com.br/comprar/mercedes-benz/cla-180/16-cgi-gasolina-7g-dct/4-portas/2017-2018/53133833?pos=m53133833g:&np=1"
+  },
+  {
+    "title": "VOLKSWAGEN T-CROSS",
+    "description": "1.0 200 TSI TOTAL FLEX COMFORTLINE AUTOMÁTICO",
+    "price": " 102.900",
+    "location": "Jundiaí - SP",
+    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202407/20240707/volkswagen-tcross-1.0-200-tsi-total-flex-comfortline-automatico-wmimagem1155399082.jpg",
+    "link": "https://www.webmotors.com.br/comprar/volkswagen/t-cross/10-200-tsi-total-flex-comfortline-automatico/4-portas/2021/53133685?pos=n53133685g:&np=1"
   },
   {
     "title": "RENAULT KWID",
     "description": "1.0 12V SCE FLEX ZEN MANUAL",
-    "price": "46.900",
+    "price": " 44.500",
     "location": "Jundiaí - SP",
-    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202405/20240509/renault-kwid-1.0-12v-sce-flex-zen-manual-wmimagem08015422673.jpg",
-    "link": "https://www.webmotors.com.br/comprar/renault/kwid/10-12v-sce-flex-zen-manual/4-portas/2020-2021/52078946?pos=r52078946g:&np=1"
-  },
-  {
-    "title": "CHEVROLET ONIX",
-    "description": "1.0 MPFI LT 8V FLEX 4P MANUAL",
-    "price": "43.900",
-    "location": "Jundiaí - SP",
-    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202405/20240509/chevrolet-onix-1.0-mpfi-lt-8v-flex-4p-manual-wmimagem0826556126.jpg",
-    "link": "https://www.webmotors.com.br/comprar/chevrolet/onix/10-mpfi-lt-8v-flex-4p-manual/4-portas/2014/52079179?pos=s52079179g:&np=1"
+    "image": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2024/202407/20240707/renault-kwid-1.0-12v-sce-flex-zen-manual-wmimagem12393000655.jpg",
+    "link": "https://www.webmotors.com.br/comprar/renault/kwid/10-12v-sce-flex-zen-manual/4-portas/2020-2021/53133851?pos=o53133851g:&np=1"
   }
 ]
