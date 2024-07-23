@@ -119,11 +119,6 @@ export default function Navbar() {
                   fontWeight={"bold"}
                 
                 >
-                         <ListItem >
-                      <Link href={"/"} onClick={onClose}>
-                        <Text>{"HOME"}</Text>
-                      </Link>
-                    </ListItem>
                   {nav.map((item, index) => (
                     <ListItem key={index} onClick={onClose}>
                       <Link href={item.link}>
