@@ -24,7 +24,9 @@ export type Veiculo = {
   km: number;
   observacao: string;
   valor: number;
-  opcional: string[];
+  opcional?: {
+    item: string[];
+  };
   galeria: {
     item: string[];
   };

@@ -16,11 +16,12 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { EvaluationCard } from "@/components/EvaluationCard";
-import React from "react";
+import React, { useState } from "react";
 import CardVehicle from "@/components/ShowroomCard/Card";
-import useFetchXML from "./hooks/useFetchXML";
+import useFetchXML, { Veiculo } from "./hooks/useFetchXML";
 import { formatCurrency } from "@/utils/formatCurrency";
 import { handleSendVehiculeMessage } from "@/utils/SendVehiculeMessage";
+import CustomModal from "@/components/Modal/CustomModal";
 
 const Avaliacoes = [
   {
@@ -53,6 +54,18 @@ const URL =
 
 export default function Home() {
   const { loading, data, error } = useFetchXML(URL);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedVehicle, setSelectedVehicle] = useState<Veiculo | null>(null);
+
+  const openModal = (veiculo: Veiculo) => {
+    setSelectedVehicle(veiculo);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedVehicle(null);
+    setIsModalOpen(false);
+  };
 
   return (
     <Flex flexDir="column" bgColor="#282829">
@@ -189,7 +202,7 @@ export default function Home() {
                   title={veiculo.titulo.toLowerCase()}
                   description={veiculo.modelo.toLowerCase()}
                   price={formatCurrency(veiculo.valor)}
-                  handleClick={() => handleSendVehiculeMessage(veiculo)}
+                  handleClick={() => openModal(veiculo)}
                 />
                 {index !== slicedArray.length - 1 && (
                   <Divider
@@ -202,6 +215,7 @@ export default function Home() {
               </GridItem>
             ))
         )}
+         <CustomModal isOpen={isModalOpen} onClose={closeModal} vehicle={selectedVehicle} />
       </Grid>
     </Flex>
   );

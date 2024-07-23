@@ -13,6 +13,7 @@ import React, { useState } from "react";
 import useFetchXML, { Veiculo } from "../hooks/useFetchXML";
 import { formatCurrency } from "@/utils/formatCurrency";
 import { handleSendVehiculeMessage } from "@/utils/SendVehiculeMessage";
+import CustomModal from "@/components/Modal/CustomModal";
 
 const URL =
   "https://boomsistemas.com.br/api/integration-api/xml/ra-1183-ncnbvfghdhdgxxxxxx1777";
@@ -21,7 +22,8 @@ const renderVehicleGrid = (
   data: any[],
   start: number,
   end: number,
-  mt: number | string = 5
+  mt: number | string = 5,
+  handleClick: (veiculo: Veiculo) => void
 ) => {
   return (
     <Grid
@@ -53,7 +55,7 @@ const renderVehicleGrid = (
             title={veiculo.titulo.toLowerCase()}
             description={veiculo.modelo.toLowerCase()}
             price={formatCurrency(veiculo.valor)}
-            handleClick={() => handleSendVehiculeMessage(veiculo)}
+            handleClick={() => handleClick(veiculo)}
           />
           {index !== slicedArray.length - 1 && (
             <Divider
@@ -71,18 +73,40 @@ const renderVehicleGrid = (
 
 export default function Page() {
   const { loading, data, error } = useFetchXML(URL);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedVehicle, setSelectedVehicle] = useState<Veiculo | null>(null);
+
+  const openModal = (veiculo: Veiculo) => {
+    setSelectedVehicle(veiculo);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedVehicle(null);
+    setIsModalOpen(false);
+  };
 
   if (loading) {
     return (
-      <Flex justifyContent="center"   bgColor="#848688" alignItems="center" h="10vh">
-        <Spinner size="xl" color='white'/>
+      <Flex
+        justifyContent="center"
+        bgColor="#848688"
+        alignItems="center"
+        h="10vh"
+      >
+        <Spinner size="xl" color="white" />
       </Flex>
     );
   }
 
   if (error) {
     return (
-      <Flex justifyContent="center"   bgColor="#848688" alignItems="center" h="10vh">
+      <Flex
+        justifyContent="center"
+        bgColor="#848688"
+        alignItems="center"
+        h="10vh"
+      >
         <Alert status="error">
           <AlertIcon />
           {error}
@@ -92,15 +116,23 @@ export default function Page() {
   }
 
   return (
-    <Flex bg="dark" display="column" pb={5}>
-      {renderVehicleGrid(data, 0, 5, 0)}{" "}
-      {/* Remove margin top for the first grid */}
-      {renderVehicleGrid(data, 5, 10)}
-      {data.length > 10 && renderVehicleGrid(data, 10, 15)}
-      {data.length > 15 && renderVehicleGrid(data, 15, 20)}
-      {data.length > 20 && renderVehicleGrid(data, 20, 25)}
-      {data.length > 25 && renderVehicleGrid(data, 25, 30)}
-      {data.length > 30 && renderVehicleGrid(data, 30, 35)}
-    </Flex>
+    <>
+      <Flex bg="dark" display="column" pb={5}>
+        {renderVehicleGrid(data, 0, 5, 0, openModal)}{" "}
+        {/* Remove margin top for the first grid */}
+        {renderVehicleGrid(data, 5, 10, undefined, openModal)}
+        {data.length > 10 &&
+          renderVehicleGrid(data, 10, 15, undefined, openModal)}
+        {data.length > 15 &&
+          renderVehicleGrid(data, 15, 20, undefined, openModal)}
+        {data.length > 20 &&
+          renderVehicleGrid(data, 20, 25, undefined, openModal)}
+        {data.length > 25 &&
+          renderVehicleGrid(data, 25, 30, undefined, openModal)}
+        {data.length > 30 &&
+          renderVehicleGrid(data, 30, 35, undefined, openModal)}
+      </Flex>
+      <CustomModal isOpen={isModalOpen} onClose={closeModal} vehicle={selectedVehicle} />
+    </>
   );
 }
