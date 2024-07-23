@@ -50,14 +50,19 @@ const CustomModal: React.FC<CustomModalProps> = ({
     : vehicle.opcional?.item.slice(0, 5);
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} size="xl" >
+    <Modal isOpen={isOpen} onClose={onClose} size="xl">
       <ModalOverlay />
       <ModalContent maxH="fit-content" maxW="1000px" overflowY="auto">
         <ModalHeader>{vehicle.titulo.toUpperCase()}</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
-          <Box display="flex" flexDirection={{ base: "column", md: "row" }}>
-            <Box flex="1" mr={{ base: 0, md: 4 }}>
+          <Box
+            display="flex"
+            flexDirection={{ base: "column", md: "row" }}
+            justifyContent={"flex-start"}
+            alignItems="flex-start"
+          >
+            <Box flex="1" mr={{ base: 0, md: 4 }} mb={{ base: 4, md: 0 }}>
               {vehicle.galeria?.item && vehicle.galeria.item.length > 0 ? (
                 <ImageCarousel images={vehicle.galeria.item} />
               ) : (
@@ -71,7 +76,7 @@ const CustomModal: React.FC<CustomModalProps> = ({
               )}
             </Box>
             <Box flex="1" px="4">
-              <VStack align="start" spacing={2}>
+              <VStack hideFrom={"md"} align="start" spacing={2}>
                 <Text fontSize="md" fontWeight="bold">
                   Preço:
                 </Text>
@@ -104,6 +109,49 @@ const CustomModal: React.FC<CustomModalProps> = ({
                 </Text>
                 <Text fontSize="md">{vehicle.combustivel}</Text>
               </VStack>
+              <VStack hideBelow={"md"} align="start" spacing={2}>
+                <Text fontSize="md" fontWeight="bold">
+                  Preço:
+                </Text>
+                <Text fontSize="md">{formatCurrency(vehicle.valor)}</Text>
+                <Divider />
+                <Text fontSize="md" fontWeight="bold">
+                  Descrição:
+                </Text>
+                <Text fontSize="md">{vehicle.observacao}</Text>
+                <Divider />
+                <HStack w='100%'>
+                  <VStack align="start" w='50%'>
+                    <Text fontSize="md" fontWeight="bold">
+                    Ano:
+                    </Text>
+                    <Text fontSize="md">
+                      {vehicle.ano_fab} / {vehicle.ano_mod}
+                    </Text>
+                  </VStack>
+                  <VStack align="start" w='50%'>
+                  <Text fontSize="md" fontWeight="bold">
+                Portas:
+                </Text>
+                <Text fontSize="md">{vehicle.portas}</Text>
+                  </VStack>
+                </HStack>
+                <Divider />
+                <HStack   w='100%'>
+                  <VStack align="start" w='50%'>
+                    <Text fontSize="md" fontWeight="bold">
+                KM:
+                </Text>
+                <Text fontSize="md">{vehicle.km} km</Text>
+                  </VStack>
+                  <VStack align="start"  w='50%'>
+                  <Text fontSize="md" fontWeight="bold">
+                Combustivel:
+                </Text>
+                <Text fontSize="md">{vehicle.combustivel}</Text>
+                  </VStack>
+                </HStack>          
+              </VStack>
             </Box>
           </Box>
           {vehicle.opcional?.item && vehicle.opcional.item.length > 0 && (
@@ -128,13 +176,12 @@ const CustomModal: React.FC<CustomModalProps> = ({
                   <Text
                     size="sm"
                     color="primary"
-                    fontWeight='bold'
-                    cursor='pointer'
-                    h='6'
-                    _hover={{borderBottom:'2px'}}
+                    fontWeight="bold"
+                    cursor="pointer"
+                    h="6"
+                    _hover={{ borderBottom: "2px" }}
                     onClick={toggleShowAllFeatures}
                     mt={2}
-            
                   >
                     Mostrar {showAllFeatures ? "menos" : "mais"}
                   </Text>
@@ -159,8 +206,8 @@ const CustomModal: React.FC<CustomModalProps> = ({
             color="white"
             onClick={() => handleSendVehiculeMessage(vehicle)}
             _hover={{ bg: "secondary" }}
-            leftIcon={<WhatsAppIcon/>}
-            fontWeight={'bold'}
+            leftIcon={<WhatsAppIcon />}
+            fontWeight={"bold"}
           >
             ENTRAR EM CONTATO
           </Button>

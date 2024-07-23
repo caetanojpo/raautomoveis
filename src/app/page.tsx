@@ -108,7 +108,7 @@ export default function Home() {
           top={0}
           left={0}
         >
-          <Flex h={"100%"} w={"100%"} position={"relative"}>
+          <Flex h={"100%"} w={"100%"} position={"relative"} >
             <Image
               style={{
                 position: "absolute",
@@ -200,7 +200,7 @@ export default function Home() {
                 <CardVehicle
                   image={veiculo.galeria?.item[0]}
                   title={veiculo.titulo.toLowerCase()}
-                  description={veiculo.modelo.toLowerCase()}
+                  description={veiculo.ano_mod.toString()}
                   price={formatCurrency(veiculo.valor)}
                   handleClick={() => openModal(veiculo)}
                 />

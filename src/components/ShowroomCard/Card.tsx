@@ -64,14 +64,14 @@ const CardVehicle = (props: propsCardVehicle) => {
           {props.title}
         </Text>
         <Text
-          fontSize={{ base: "10px", md: "14px" }}
-          fontFamily="Eina"
+          fontSize={{ base: "12px", md: "16px" }}
+          fontFamily="EinaBold"
           color="black"
           width={{ base: "80%", md: "240px" }}
-          fontWeight={700}
-          mb={4}
+          fontWeight={'800'}
+          my={2}
         >
-          {props.description}
+          Ano: {props.description}
         </Text>
         <Text
           fontSize={{ base: "12px", md: "xl" }}

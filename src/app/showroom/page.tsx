@@ -53,7 +53,7 @@ const renderVehicleGrid = (
           <CardVehicle
             image={veiculo.galeria?.item[0]}
             title={veiculo.titulo.toLowerCase()}
-            description={veiculo.modelo.toLowerCase()}
+            description={veiculo.ano_mod.toString()}
             price={formatCurrency(veiculo.valor)}
             handleClick={() => handleClick(veiculo)}
           />

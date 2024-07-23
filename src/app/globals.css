@@ -46,6 +46,10 @@ body {
   font-family: Eina;
   src: url(../assets/font/Eina01-RegularItalic.ttf);
 }
+@font-face {
+  font-family: EinaBold;
+  src: url(../assets/font/Eina01-BoldItalic.ttf);
+}
 
 a {
   color: inherit;

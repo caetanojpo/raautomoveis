@@ -20,12 +20,12 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
   };
 
   return (
-    <Box position="relative" width="100%" height="100%" maxH={'800px'} >
+    <Box position="relative" width="100%" height="100%" >
       {images.length > 0 && (
         <Image
           src={images[currentIndex]}
           alt={`Carousel image ${currentIndex + 1}`}
-          objectFit="cover"
+          objectFit="contain"
           width="100%"
           height="100%"
         />
