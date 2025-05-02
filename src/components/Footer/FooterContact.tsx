@@ -1,13 +1,12 @@
-"use client"
+"use client";
 import { customGradient } from "@/app/theme";
-import { Flex, Box, Input, Button } from "@chakra-ui/react";
+import { Flex, Box, Input } from "@chakra-ui/react";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import logo from "@/assets/footerLogo.png";
 import CustomButton from "../buttons/CustomButton";
 
 export default function FooterContact() {
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -39,12 +38,11 @@ export default function FooterContact() {
     }
 
     setWhatsMessage(
-      `Olá, como vai? Me chamo ${formData.name}, com o e-mail: ${formData.email}. Gostaria de um atendimento!`
+      `Olá, como vai? Me chamo ${formData.name}, com o e-mail: ${formData.email}. Gostaria de saber mais sobre os seus serviços!`
     );
   }, [formData]);
 
   const handleClick: any = () => {
-
     if (isNotValid) return;
     const url = `https://api.whatsapp.com/send?phone=5511974326999&text=${encodeURIComponent(
       whatsMessage
@@ -55,7 +53,7 @@ export default function FooterContact() {
   return (
     <Flex
       style={{ background: customGradient }}
-      h={{ base: "50dvh", md:'35dvh', xl: "12dvh" }}
+      h={{ base: "50dvh", md: "35dvh", xl: "12dvh" }}
       w={"100dvw"}
       position={"relative"}
       flexDir={{ base: "column", xl: "row" }}
@@ -72,7 +70,7 @@ export default function FooterContact() {
           src={logo}
           fill
           objectFit={"contain"}
-          objectPosition={'left'}
+          objectPosition={"left"}
           style={{ position: "absolute" }}
         />
       </Flex>
@@ -86,7 +84,7 @@ export default function FooterContact() {
         flexDir={{ base: "column", xl: "row" }}
       >
         <Input
-          name='name'
+          name="name"
           value={formData.name}
           w={{ base: "90%", xl: "30%" }}
           placeholder="Digite seu nome"
@@ -97,8 +95,8 @@ export default function FooterContact() {
           onChange={(event: any) => handleTextareaChange(event)}
         />
         <Input
-        name='email'
-        value={formData.email}
+          name="email"
+          value={formData.email}
           w={{ base: "90%", xl: "30%" }}
           placeholder="Seu e-mail"
           bg={"light"}
@@ -108,7 +106,12 @@ export default function FooterContact() {
           onChange={(event: any) => handleTextareaChange(event)}
         />
 
-        <CustomButton wBase={'90%'} title="ENTRAR EM CONTATO" isNotValid={isNotValid} handleClick={handleClick} />
+        <CustomButton
+          wBase={"90%"}
+          title="ENTRAR EM CONTATO"
+          isNotValid={isNotValid}
+          handleClick={handleClick}
+        />
       </Flex>
       <Box
         position={"absolute"}

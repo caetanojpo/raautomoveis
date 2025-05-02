@@ -57,7 +57,7 @@ export default function Footer() {
     {
       description: "RUA BOM JESUS DE PIRAPORA, 3171 - VILA RAMI - JUDIAI SP",
       icon: "teenyicons:pin-outline",
-      link: "https://www.google.com/maps/place/RA+Autom%C3%B3veis/@-23.2187681,-46.8805116,18.5z/data=!4m10!1m2!2m1!1sra+automoveis!3m6!1s0x94cf215e960b7675:0x10659e5ec95489dd!8m2!3d-23.2181397!4d-46.8788733!15sCg1yYSBhdXRvbW92ZWlzWg8iDXJhIGF1dG9tb3ZlaXOSAQpjYXJfZGVhbGVymgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU53YTBwVU0ybFJSUkFC4AEA!16s%2Fg%2F11sgkvg90n?entry=ttu",
+      link: "https://maps.app.goo.gl/EZQ9Q26ZZAN2BzCA8",
     },
   ];
 
