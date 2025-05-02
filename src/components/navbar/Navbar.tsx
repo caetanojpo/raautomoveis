@@ -30,6 +30,7 @@ export default function Navbar() {
     { name: "SOBRE", link: "/about" },
     { name: "CONTATO", link: "/contact" },
     { name: "FINANCIAMENTO", link: "/finance" },
+    { name: "CONHEÇA A LOJA", link: "https://maps.app.goo.gl/zmNU98q6Wi4zq3X38" }
   ];
   return (
     <>
@@ -73,9 +74,9 @@ export default function Navbar() {
             color={"light"}
             justifyContent={"space-evenly"}
             zIndex={40}
-            mr={{ xl: "4dvw", "2xl": "2.5dvw" }}
+            mr={{ xl: "7dvw", "2xl": "6dvw" }}
             mt={{ xl: "1.2dvh", "2xl": "1dvh" }}
-            fontSize={{ xl: "0.9rem", "2xl": "1.1rem" }}
+            fontSize={{ xl: "0.8rem", "2xl": "1.1rem" }}
             fontStyle={"italic"}
             fontWeight={"bold"}
           >
@@ -85,10 +86,11 @@ export default function Navbar() {
                 borderBottom={pathname === item.link ? "3px solid" : "3px solid"}
                 borderColor={pathname === item.link ? "primary" : "transparent"}
                 // className="menu__link"
+                // mr={index !== nav.length - 1 ? "-90px" : "0"}
                 _hover={{borderBottom:'3px solid', borderColor:'primary'}}
                 minH={{ xl: "25px", "2xl": "28px" }}
               >
-                <Link href={item.link}>
+                <Link href={item.link} target={item.name === "CONHEÇA A LOJA" ? "_blank" : ""}>
                   <Text>{item.name}</Text>
                 </Link>
               </ListItem>

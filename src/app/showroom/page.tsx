@@ -15,8 +15,8 @@ import { formatCurrency } from "@/utils/formatCurrency";
 import { handleSendVehiculeMessage } from "@/utils/SendVehiculeMessage";
 import CustomModal from "@/components/Modal/CustomModal";
 
-const URL =
-  "https://boomsistemas.com.br/api/integration-api/xml/ra-1183-ncnbvfghdhdgxxxxxx1777";
+const URL = process.env.NEXT_PUBLIC_BOOM_URL || "";
+
 
 const renderVehicleGrid = (
   data: any[],
@@ -75,7 +75,7 @@ export default function Page() {
   const { loading, data, error } = useFetchXML(URL);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVehicle, setSelectedVehicle] = useState<Veiculo | null>(null);
-
+  console.log(URL)
   const openModal = (veiculo: Veiculo) => {
     setSelectedVehicle(veiculo);
     setIsModalOpen(true);
