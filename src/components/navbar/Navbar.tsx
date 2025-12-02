@@ -4,7 +4,6 @@ import {
   Drawer,
   DrawerBody,
   DrawerContent,
-  DrawerHeader,
   DrawerOverlay,
   Flex,
   List,
@@ -30,7 +29,10 @@ export default function Navbar() {
     { name: "SOBRE", link: "/about" },
     { name: "CONTATO", link: "/contact" },
     { name: "FINANCIAMENTO", link: "/finance" },
-    { name: "CONHEÇA A LOJA", link: "https://maps.app.goo.gl/zmNU98q6Wi4zq3X38" }
+    {
+      name: "CONHEÇA A LOJA",
+      link: "https://maps.app.goo.gl/zmNU98q6Wi4zq3X38",
+    },
   ];
   return (
     <>
@@ -54,12 +56,12 @@ export default function Navbar() {
           position={"relative"}
           zIndex={30}
         >
-          <Link href='/'>
-          <Image
-            alt="RA Automóveis Logo"
-            src={logo}
-            style={{ position: "absolute" }}
-          />
+          <Link href="/">
+            <Image
+              alt="RA Automóveis Logo"
+              src={logo}
+              style={{ position: "absolute" }}
+            />
           </Link>
         </Flex>
         <Flex
@@ -83,15 +85,22 @@ export default function Navbar() {
             {nav.map((item, index) => (
               <ListItem
                 key={index}
-                borderBottom={pathname === item.link ? "3px solid" : "3px solid"}
+                borderBottom={
+                  pathname === item.link ? "3px solid" : "3px solid"
+                }
                 borderColor={pathname === item.link ? "primary" : "transparent"}
                 // className="menu__link"
                 // mr={index !== nav.length - 1 ? "-90px" : "0"}
-                _hover={{borderBottom:'3px solid', borderColor:'primary'}}
+                _hover={{ borderBottom: "3px solid", borderColor: "primary" }}
                 minH={{ xl: "25px", "2xl": "28px" }}
               >
-                <Link href={item.link} target={item.name === "CONHEÇA A LOJA" ? "_blank" : ""}>
-                  <Text>{item.name}</Text>
+                <Link
+                  href={item.link}
+                  target={item.name === "CONHEÇA A LOJA" ? "_blank" : ""}
+                >
+                  <strong translate="no" className="notranslate">
+                    {item.name}
+                  </strong>
                 </Link>
               </ListItem>
             ))}
@@ -104,10 +113,15 @@ export default function Navbar() {
           >
             <CustomIcon color="white" icon="material-symbols:menu" />
           </Button>
-          <Drawer placement={"left"} onClose={onClose} isOpen={isOpen} size={'xs'}>
+          <Drawer
+            placement={"left"}
+            onClose={onClose}
+            isOpen={isOpen}
+            size={"xs"}
+          >
             <DrawerOverlay />
             <DrawerContent bg={"secondary"}>
-              <DrawerBody   overflow={'hidden'}>
+              <DrawerBody overflow={"hidden"}>
                 <List
                   display={{ base: "flex", xl: "none" }}
                   flexDir="column"
@@ -119,12 +133,13 @@ export default function Navbar() {
                   fontSize={"1.2rem"}
                   fontStyle={"italic"}
                   fontWeight={"bold"}
-                
                 >
                   {nav.map((item, index) => (
                     <ListItem key={index} onClick={onClose}>
                       <Link href={item.link}>
-                        <Text>{item.name}</Text>
+                        <strong translate="no" className="notranslate">
+                          {item.name}
+                        </strong>
                       </Link>
                     </ListItem>
                   ))}

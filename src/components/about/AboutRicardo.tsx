@@ -15,19 +15,18 @@ export default function AboutRicardo() {
   const [isMobile] = useMediaQuery("(max-width: 800px)");
   return (
     <Flex h={{ base: "100%", xl: "90dvh" }} w={"100dvw"} position={"relative"}>
-      
-        <Flex position={"absolute"} h={"100%"} w={"100%"}>
-          <Flex position={"relative"} h={"100%"} w={"100%"}>
-            <Image
-              alt=""
-              src={Ricardo}
-              fill
-              objectFit={"cover"}
-              objectPosition={"right"}
-              style={{ position: "absolute" }}
-            />
-          </Flex>
+      <Flex position={"absolute"} h={"100%"} w={"100%"}>
+        <Flex position={"relative"} h={"100%"} w={"100%"}>
+          <Image
+            alt=""
+            src={Ricardo}
+            fill
+            objectFit={"cover"}
+            objectPosition={"right"}
+            style={{ position: "absolute" }}
+          />
         </Flex>
+      </Flex>
 
       <Flex
         zIndex={40}
@@ -39,8 +38,8 @@ export default function AboutRicardo() {
         flexDirection={"column"}
       >
         <Flex
-          fontStyle={'italic'}
-          color={'light'}
+          fontStyle={"italic"}
+          color={"light"}
           flexDirection={"column"}
           align={"center"}
           style={{ letterSpacing: "5px" }}
@@ -96,7 +95,7 @@ export default function AboutRicardo() {
           <Text>
             Ricardo Ambrósio sempre foi apaixonado por Carros. Jipeiro e
             fascinado por motores, teve o mundo dos automóveis sempre presente
-            em sua vida. Trabalhou por 29 anos em Bancos, fazendo financiamento
+            em sua vida. Trabalhou por 31 anos em Bancos, fazendo financiamento
             de veículos, ajudando milhares de pessoas a conquistar o sonho do
             seu Carro Novo.
           </Text>
